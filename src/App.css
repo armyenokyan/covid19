@@ -1,38 +1,241 @@
 .App {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  text-align: left;
+  color: #4a5568;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.date {
+  float: right;
+  font-size: 16px;
+  font-family: monospace;
+  color: #fafeff;
+  padding-right: 35px;
+}
+
+.logo {
+  padding-left: 30px;
+}
+
+.flag {
+  padding-right: 10px;
+}
+
+.link {
+  text-decoration: none;
+  font-family: system-ui;
+  color: #2f272b;
+}
+
+.header-ui {
+  position: relative;
+  padding: 0.7rem 0 4rem 0;
+  background-image: linear-gradient(
+    -225deg,
+    #a445b2 0%,
+    #d41872 52%,
+    #ff0066 100%
+  );
+  height: 235px;
+}
+
+.header-ui::after {
+  display: block;
+  content: "";
+  height: 100%;
+  background: url("./img/header.svg") bottom no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -1px;
+  left: -20%;
+  right: -20%;
+  z-index: 1;
+}
+
+.zindex100 {
+  z-index: 100;
+}
+
+.footer {
+  position: inherit;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: linear-gradient(
+    -225deg,
+    #a445b2 0%,
+    #d41872 52%,
+    #ff0066 100%
+  );
+  color: white;
+  text-align: center;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 1px;
+}
+
+.details {
+  text-align-last: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.details-count {
+  font-size: 36px;
+}
+
+.details-title {
+  font-size: 48px;
+
+  font-family: system-ui;
+  color: #ca247f;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flag {
+  margin-top: -7px;
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home-title {
+  text-align-last: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background-image: linear-gradient(
+    -225deg,
+    rgb(164 69 178 / 90%) 0%,
+    hsl(331deg 80% 46% / 90%) 52%,
+    rgb(255 0 102 / 90%) 100%
+  );
+  color: white;
+  padding: 5px 20px 5px 20px;
+  border-radius: 3px;
+  font-size: 22px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.margin20 {
+  margin: 20px 0 20px 0;
+}
+
+.small-percent {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.err404 {
+  background: center / contain no-repeat url("img/err404.png");
+  min-height: calc(100vh - 240px);
+}
+
+.table-legend {
+  width: 1rem;
+  margin-right: 0.3rem;
+  height: 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: -1px;
+  margin-left: 0.3rem;
+}
+
+.bg-gray-200 {
+  background-color: #edf2f7;
+}
+.bg-gray-400 {
+  background-color: #cbd5e0;
+}
+.bg-gray-800 {
+  background-color: #2d3748;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-red-200 {
+  background-color: #fed7d7;
+}
+.bg-red-400 {
+  background-color: #fc8181;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bg-red-800 {
+  background: #9b2c2c;
+  color: white;
+}
+
+.table-info {
+  display: inline-flex;
+  float: right;
+  color: #4a5566;
+  font-size: 0.75rem;
+}
+
+.table-info-title {
+  font-weight: bolder;
+  padding-right: 20px;
+}
+.noborder {
+  border: none;
+  padding: 3px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.chart-title {
+  font-size: 32px;
+  font-family: system-ui;
+  color: #2d3748;
+  text-align: center;
+  font-weight: 800;
+  padding-bottom: 20px;
+}
+
+.float-right {
+  float: right;
+}
+
+.padding-left15 {
+  padding-left: 15px;
+}
+
+.padding-right15 {
+  padding-right: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    padding-left: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .date {
+    padding-right: 12px;
   }
+
+  .table-info-title {
+    font-weight: 500;
+    padding-right: 0px;
+    font-size: 8px;
+  }
+  .table-info {
+    font-size: 8px;
+  }
+
+  .padding-left15 {
+    padding-left: 0px;
+  }
+
+  .padding-right15 {
+    padding-right: 0px;
+  }
+  .details-title {
+    font-size: 32px;
+  }
+}
+
+.absolute {
+  position: absolute;
 }
