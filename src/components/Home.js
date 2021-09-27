@@ -9,8 +9,6 @@ import HomeTitle from "./HomeTitle";
 import HomeChart from "./HomeChart";
 
 const Home = ({ countries, setCountries, loading }) => {
-  // const [countries, setCountries] = useState([]);
-  // const [loading, setIsLoading] = useState(false);
   const [date, setDate] = useState([]);
   const [recovered, setRecovered] = useState([]);
   const [deaths, setDeaths] = useState([]);

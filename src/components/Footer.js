@@ -5,7 +5,11 @@ const Footer = () => {
     <footer className="footer ">
       <p>
         <b>GitHub: </b>
-        <a target="_blank" rel="noreferrer" href="https://github.com/armyenokyan/covid19/">
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/armyenokyan/covid19/"
+        >
           https://github.com/armyenokyan/covid19
         </a>
       </p>

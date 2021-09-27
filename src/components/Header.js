@@ -5,7 +5,6 @@ const Header = () => {
     <div className="row col-md-12 header-ui">
       <div className="col zindex100">
         <a href="/">
-          {" "}
           <img className="logo" alt="covid19" width="220" src={Logo} />
         </a>
       </div>

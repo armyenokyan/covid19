@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router";
 
 const DetailsSelect = ({ countries, history }) => {
-  const changeOption = (ev) => {
+  const changeSelect = (ev) => {
     history.push(`/${ev.target.value.toLowerCase()}`);
   };
   return (
@@ -10,7 +10,7 @@ const DetailsSelect = ({ countries, history }) => {
       <select
         className="form-select form-select-lg mb-3"
         aria-label=".form-select-lg example"
-        onChange={changeOption}
+        onChange={changeSelect}
         defaultValue={`${history.location.pathname
           .replace("/", "")
           .toLowerCase()}`}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Link } from "react-router-dom";
-import Asc from "../icons/Asc";
-import Desc from "../icons/Desc";
+import sortAsc from "../img/sort-asc.svg";
+import sortDesc from "../img/sort-desc.svg";
 import { withRouter } from "react-router";
 
 const Table = ({ countries, setCountries, history }) => {
@@ -147,33 +147,105 @@ const Table = ({ countries, setCountries, history }) => {
   };
 
   return (
-    <div className="container">
+    <div className="container table-responsive">
       <table className="table table-hover pointer margin20">
         <thead>
           <tr>
             <th onClick={sortTerritory} scope="col">
               Territory
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
             <th onClick={sortTotalCases} scope="col">
               Total Cases
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
             <th onClick={sortNewCases} scope="col">
               New Cases
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
             <th onClick={sortTotalDeaths} scope="col">
               Total Deaths
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
             <th onClick={sortNewDeaths} scope="col">
               New Deaths
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
             <th onClick={sortTotalRecovered} scope="col">
               Total Recovered
-              <div className="float-right">{sort ? <Asc /> : <Desc />}</div>
+              <div className="float-right">
+                <img
+                  src={sort ? sortAsc : sortDesc}
+                  alt="sorting"
+                  width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                />
+              </div>
             </th>
           </tr>
         </thead>
@@ -186,7 +258,7 @@ const Table = ({ countries, setCountries, history }) => {
               onClick={toLink}
               className="pointer"
             >
-              <th scope="row">
+              <th>
                 <Link className="link" to={`/${item.code.toLowerCase()}`}>
                   {item.name}
                 </Link>
@@ -222,7 +294,7 @@ const Table = ({ countries, setCountries, history }) => {
               >
                 {item.today.confirmed ? (
                   <>
-                    +<b> {item.today.confirmed}</b>
+                    +&nbsp;<b>{item.today.confirmed}</b>
                     <span className="small-percent">
                       (
                       {(
@@ -280,7 +352,7 @@ const Table = ({ countries, setCountries, history }) => {
               >
                 {item.today.deaths ? (
                   <>
-                    + <b>{item.today.deaths}</b>
+                    +&nbsp;<b>{item.today.deaths}</b>
                     <span className="small-percent">
                       (
                       {(
