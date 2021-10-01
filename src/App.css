@@ -5,6 +5,7 @@
     "Noto Color Emoji";
   text-align: left;
   color: #4a5568;
+  font-display: optional;
 }
 
 .hidden {
@@ -17,6 +18,7 @@
   font-family: monospace;
   color: #fafeff;
   padding-right: 35px;
+  font-display: optional;
 }
 
 .logo {
@@ -29,19 +31,26 @@
 
 .link {
   text-decoration: none;
-  font-family: system-ui;
   color: #2f272b;
+}
+
+.header-gradient {
+  background: #1e3c72; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2a5298,
+    #1e3c72
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2a5298,
+    #1e3c72
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .header-ui {
   position: relative;
   padding: 0.7rem 0 4rem 0;
-  background-image: linear-gradient(
-    -225deg,
-    #a445b2 0%,
-    #d41872 52%,
-    #ff0066 100%
-  );
   height: 235px;
 }
 
@@ -67,17 +76,12 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-image: linear-gradient(
-    -225deg,
-    #a445b2 0%,
-    #d41872 52%,
-    #ff0066 100%
-  );
   color: white;
   text-align: center;
   font-family: monospace;
   font-size: 12px;
-  padding: 1px;
+  height: 50px;
+  font-display: optional;
 }
 
 .details {
@@ -92,11 +96,10 @@
 }
 
 .details-title {
-  font-size: 48px;
-
-  font-family: system-ui;
-  color: #ca247f;
+  font-size: 36px;
+  color: #1e3c72;
   text-align: center;
+  font-weight: 800;
 }
 .flag {
   margin-top: -7px;
@@ -107,16 +110,11 @@
   text-align-last: center;
   margin-bottom: 20px;
   margin-top: 20px;
-  background-image: linear-gradient(
-    -225deg,
-    rgb(164 69 178 / 90%) 0%,
-    hsl(331deg 80% 46% / 90%) 52%,
-    rgb(255 0 102 / 90%) 100%
-  );
   color: white;
-  padding: 5px 20px 5px 20px;
-  border-radius: 3px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 5px;
   font-size: 22px;
+  opacity: 0.92;
 }
 
 .margin20 {
@@ -130,7 +128,7 @@
 
 .err404 {
   background: center / contain no-repeat url("img/err404.png");
-  min-height: calc(100vh - 240px);
+  min-height: calc(100vh - 295px);
 }
 
 .table-legend {
@@ -174,7 +172,7 @@
 
 .table-info-title {
   font-weight: bolder;
-  padding-right: 20px;
+  padding-right: 9px;
 }
 .noborder {
   border: none;
@@ -187,7 +185,6 @@
 
 .chart-title {
   font-size: 32px;
-  font-family: system-ui;
   color: #2d3748;
   text-align: center;
   font-weight: 800;
@@ -204,6 +201,10 @@
 
 .padding-right15 {
   padding-right: 15px;
+}
+
+.padding-top19 {
+  padding-top: 19px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -232,7 +233,7 @@
     padding-right: 0px;
   }
   .details-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .table {
@@ -245,7 +246,5 @@
 
   .table > :not(caption) > * > * {
     padding: 0.3rem 0.2rem;
-
   }
-  
 }

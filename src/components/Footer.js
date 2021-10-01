@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer ">
-      <p>
+    <footer className="footer header-gradient">
+      <p className="padding-top19">
         <b>GitHub: </b>
         <a
           target="_blank"

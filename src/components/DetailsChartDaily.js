@@ -1,3 +1,4 @@
+import React from "react";
 import { Bar } from "react-chartjs-2";
 
 const DetailsChartDaily = ({ date, newrecovered, newconfirmed, newdeaths }) => {
@@ -71,4 +72,4 @@ const DetailsChartDaily = ({ date, newrecovered, newconfirmed, newdeaths }) => {
   );
 };
 
-export default DetailsChartDaily;
+export default React.memo(DetailsChartDaily);

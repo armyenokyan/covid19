@@ -100,4 +100,4 @@ const Details = ({ countries, loading, history }) => {
     })
   );
 };
-export default withRouter(Details);
+export default React.memo(withRouter(Details));

@@ -164,6 +164,13 @@ const Table = ({ countries, setCountries, history }) => {
                       ? "12"
                       : "24"
                   }
+                  height={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
                 />
               </div>
             </th>
@@ -174,6 +181,13 @@ const Table = ({ countries, setCountries, history }) => {
                   src={sort ? sortAsc : sortDesc}
                   alt="sorting"
                   width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                  height={
                     /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
                       navigator.userAgent
                     )
@@ -196,6 +210,13 @@ const Table = ({ countries, setCountries, history }) => {
                       ? "12"
                       : "24"
                   }
+                  height={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
                 />
               </div>
             </th>
@@ -206,6 +227,13 @@ const Table = ({ countries, setCountries, history }) => {
                   src={sort ? sortAsc : sortDesc}
                   alt="sorting"
                   width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                  height={
                     /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
                       navigator.userAgent
                     )
@@ -228,6 +256,13 @@ const Table = ({ countries, setCountries, history }) => {
                       ? "12"
                       : "24"
                   }
+                  height={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
                 />
               </div>
             </th>
@@ -238,6 +273,13 @@ const Table = ({ countries, setCountries, history }) => {
                   src={sort ? sortAsc : sortDesc}
                   alt="sorting"
                   width={
+                    /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+                      navigator.userAgent
+                    )
+                      ? "12"
+                      : "24"
+                  }
+                  height={
                     /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
                       navigator.userAgent
                     )
@@ -259,7 +301,11 @@ const Table = ({ countries, setCountries, history }) => {
               className="pointer"
             >
               <th>
-                <Link className="link" to={`/${item.code.toLowerCase()}`}>
+                <Link
+                  rel="preload"
+                  className="link"
+                  to={`/${item.code.toLowerCase()}`}
+                >
                   {item.name}
                 </Link>
               </th>

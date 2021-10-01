@@ -1,4 +1,9 @@
 import React from "react";
+import RecoveredIcon from "../img/recovered.svg";
+import DeathIcon from "../img/death.svg";
+import ConfirmedIcon from "../img/confirmed.svg";
+import CriticalIcon from "../img/critical.svg";
+import ActiveIcon from "../img/activecovid.svg";
 
 const TotalDetails = ({ countries }) => {
   const allConfirmed = countries.reduce(
@@ -31,7 +36,8 @@ const TotalDetails = ({ countries }) => {
       <div className="row row-cols-1 row-cols-lg-5 g-3 g-lg-3">
         <div className="col">
           <div className="p-3 border bg-secondary">
-            Active
+            <img src={ActiveIcon} alt="Recovered" height="44" width="44" />
+            <p>Active</p>
             <p className="details-count">
               {allConfirmed - allRecovered - allDeaths}
             </p>
@@ -39,25 +45,29 @@ const TotalDetails = ({ countries }) => {
         </div>
         <div className="col">
           <div className="p-3 border bg-info">
-            Confirmed
+            <img src={ConfirmedIcon} alt="Recovered" height="44" width="44" />
+            <p>Confirmed</p>
             <p className="details-count">{allConfirmed}</p>
           </div>
         </div>
         <div className="col">
           <div className="p-3 border bg-success">
-            Recovered ({allRecoveredPercent.toFixed(2)}%)
+            <img src={RecoveredIcon} alt="Recovered" height="44" width="44" />
+            <p>Recovered ({allRecoveredPercent.toFixed(2)}%)</p>
             <p className="details-count">{allRecovered}</p>
           </div>
         </div>
         <div className="col">
           <div className="p-3 border bg-warning">
-            Critical
+            <img src={CriticalIcon} alt="Recovered" height="44" width="44" />
+            <p>Critical</p>
             <p className="details-count">{allCritical}</p>
           </div>
         </div>
         <div className="col">
           <div className="p-3 border bg-danger">
-            Deaths ({(allDeathsPercent / countries.length).toFixed(2)}%)
+            <img src={DeathIcon} alt="Recovered" height="44" width="44" />
+            <p>Deaths ({(allDeathsPercent / countries.length).toFixed(2)}%)</p>
             <p className="details-count">{allDeaths}</p>
           </div>
         </div>

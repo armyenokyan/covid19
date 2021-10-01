@@ -1,3 +1,4 @@
+import React from "react";
 import { Line } from "react-chartjs-2";
 
 const DetailsChartTotal = ({ date, recovered, active, deaths }) => {
@@ -70,4 +71,4 @@ const DetailsChartTotal = ({ date, recovered, active, deaths }) => {
   );
 };
 
-export default DetailsChartTotal;
+export default React.memo(DetailsChartTotal);

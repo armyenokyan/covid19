@@ -268,7 +268,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #FFC007;
+  color: #ffc007;
 }
 
 a:not([href]):not([class]),
@@ -381,6 +381,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  font-display: optional;
 }
 
 button,
@@ -2421,7 +2422,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #EDF2F6;
+  background-color: #edf2f6;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -8123,15 +8124,13 @@ fieldset:disabled .btn {
 
 .bg-info {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-info-rgb), var(--bs-bg-opacity)) !important;
+  background: #244dd6;
 }
 
 .bg-warning {
   --bs-bg-opacity: 1;
-  background-color: rgba(
-    var(--bs-warning-rgb),
-    var(--bs-bg-opacity)
-  ) !important;
+  background: #F7971E;
+  
 }
 
 .bg-danger {

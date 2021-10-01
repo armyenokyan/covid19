@@ -2,10 +2,16 @@ import React from "react";
 import Logo from "../img/logo.png";
 const Header = () => {
   return (
-    <div className="row col-md-12 header-ui">
+    <div className="row col-md-12 header-ui header-gradient">
       <div className="col zindex100">
         <a href="/">
-          <img className="logo" alt="covid19" width="220" src={Logo} />
+          <img
+            className="logo"
+            alt="covid19"
+            width="220"
+            height="56"
+            src={Logo}
+          />
         </a>
       </div>
       <div className="col">
